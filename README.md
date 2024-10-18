@@ -10,4 +10,5 @@ An N-Body simulation running the Barnes Hut algorithm in unity, using rigid bodi
 The particles being rigid bodies are the biggest performance bottleneck. In the future, DOTS will be used to solve this problem.
 
 # How to use
-Currently, there's no front-end or executable, so the only way to run the code is by forking this repo and running it on your system. Ensure you have the most recent version of Unity and Visual Studio if you want to edit the code.
+Currently, there's no front-end or executable, so the only way to run the code is by forking this repo and running it on your system. Ensure you have the most recent version of Unity and Visual Studio if you want to edit the code.  
+Due to the large file limit that I haven't figured out yet, only the scripts for all the objects are available.

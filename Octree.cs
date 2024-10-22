@@ -141,7 +141,7 @@ public class Octree : MonoBehaviour
         ArrayList lst = new ArrayList();
         OctreeNode parent = r;
 
-        // Inital transversal to find the first unoccupied leaf (first empty octant)
+        // Initial transversal to find the first unoccupied leaf (first empty octant)
         while (r.children[octChild] != null) {
             r.Data.totalMass += rb.mass;
 
@@ -167,7 +167,6 @@ public class Octree : MonoBehaviour
 
         lst.Add(octChild);
 
-        // Debug.Log("Transversal: " + id + "[" + string.Join(", ", lst.ToArray()) + "]");
         // Set the new child node once an empty octant is found
         r.children[octChild] = new OctreeNode(rb);
         r.children[octChild].bounds = new Bounds(center, r.bounds.extents);
@@ -188,20 +187,7 @@ public class Octree : MonoBehaviour
             }
         }
 
-        //if (r.bounds.Contains(parent.Data.pos))
-        //{
-        //    octantChildren.Push(parent);
-
-        //    int parentOct = findOctant(parent.Data.pos, r.bounds.center, r);
-        //    center = findChildOctantCenter(r, parentOct);
-
-        //    r.children[parentOct] = new OctreeNode(mass, initalVel, pos, parent.Data.id);
-        //    r.children[parentOct].bounds = new Bounds(center, r.bounds.extents);
-        //}
-
         // Check: do we need to move the parent node to a child node?
-        // PROBLEM: Parent exists in a completely different octant for no reason
-        
         if (parent.Data.id != root.Data.id)
         {
             octantChildren.Push(parent);

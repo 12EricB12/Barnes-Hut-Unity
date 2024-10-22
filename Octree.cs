@@ -11,40 +11,6 @@ public class Octree : MonoBehaviour
     // Start parameters.
     public Vector3 initialSize, rootV, rootPos;
     public OctreeNode root { get; set; }
-    bool started = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Rigidbody[] starList = new Rigidbody[15];
-
-        //for (int i = 0; i < 15; i++)
-        //{
-        //    GameObject go = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        //    go.transform.localScale = new Vector3(1, 1, 1);
-        //    go.AddComponent<Rigidbody>();
-        //    go.name = i.ToString();
-
-        //    starList[i] = go.GetComponent<Rigidbody>();
-        //    starList[i].useGravity = false;
-        //    starList[i].position = new Vector3(UnityEngine.Random.Range(-20, 20), UnityEngine.Random.Range(-20, 20), UnityEngine.Random.Range(-20, 20));
-        //}
-
-        //GameObject stars = GameObject.Find("Stars");
-        //Rigidbody[] starList = stars.GetComponentsInChildren<Rigidbody>();
-
-        //foreach (Rigidbody star in starList)
-        //{
-        //    addChild(star.mass, Vector3.zero, star.position, star.name);
-        //}
-
-        started = true;
-    }
-
-    void Update()
-    {
-                
-    }
 
     private int findOctant(Vector3 pos, Vector3 origin, OctreeNode parent) {
         Vector3 OP = pos - origin; // Position vector

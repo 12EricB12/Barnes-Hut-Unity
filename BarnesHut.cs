@@ -134,7 +134,8 @@ public class BarnesHut : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    // Visual debugging of the octree. This will only activate if the central body of the simulation is selected by the user.
+    // If you want to turn it off completely, comment the whole function.
     private void OnDrawGizmosSelected()
     {
         if (!started)
